@@ -361,5 +361,30 @@ namespace Tests
             List<ContractRange> expectedResult)
         {
         }
+
+
+
+        static readonly object[] CasesForBreakContractsByYearOfService1 =
+        {
+            new List<string>{"s1" },
+            new List<string>{"s2" }
+        };
+
+        [Test, TestCaseSource(nameof(CasesForBreakContractsByYearOfService1))]
+        public void BreakContractsByYearOfService1(List<string> s)
+        {
+        }
+
+
+
+        static readonly object[] CasesForBreakContractsByYearOfService2 =
+        {
+            "s1", "s2"
+        };
+
+        [Test, TestCaseSource(nameof(CasesForBreakContractsByYearOfService2))]
+        public void BreakContractsByYearOfService2(string s)
+        {
+        }
     }
 }
